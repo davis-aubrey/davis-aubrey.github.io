@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="good.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/2.jpg" alt="Portfolio Logo">
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <img src="images/hamburger.svg" alt="Menu" class="icon-img">
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="close-nav">
+            <img src="images/close.svg" alt="Close" class="icon-img">
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="gallery-container">
+            <h1 class="gallery-heading">Photo Collections</h1>
+            
+            <div class="collections-grid">
+                <!-- Charleston Collection -->
+                <a href="charleston.html" class="collection-card">
+                    <img src="photography/covers/charleston_cover.png" alt="Charleston Collection">
+                </a>
+                
+                <!-- Couples Collection -->
+                <a href="couples.html" class="collection-card">
+                    <img src="photography/covers/couples_cover.png" alt="Couples Collection">
+                </a>
+                
+                <!-- Mountains Collection -->
+                <a href="mountains.html" class="collection-card">
+                    <img src="photography/covers/mountains_cover.png" alt="Mountains Collection">
+                </a>
+                
+                <!-- Portraits Collection -->
+                <a href="portraits.html" class="collection-card">
+                    <img src="photography/covers/portraits_cover.png" alt="Portraits Collection">
+                </a>
+                
+                <!-- Moon Collection -->
+                <a href="moon.html" class="collection-card">
+                    <img src="photography/covers/moon_cover.png" alt="Moon Collection">
+                </a>
+                
+                <!-- Galveston Collection -->
+                <a href="galveston.html" class="collection-card">
+                    <img src="photography/covers/galveston_cover.png" alt="Galveston Collection">
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/photos.bytucker/" class="social-icon">
+                    <img src="images/insta.svg" alt="Instagram" class="icon-img">
+                </a>
+                <a href="mailto:photosbytucker@gmail.com" class="social-icon">
+                    <img src="images/email.svg" alt="Email" class="icon-img">
+                </a>
+                <a href="tel:+8013699480" class="social-icon">
+                    <img src="images/phone.svg" alt="Phone" class="icon-img">
+                </a>
+            </div>
+            <p>&copy; 2025 Tucker Davis. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile navigation
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-nav').classList.add('active');
+            document.querySelector('.mobile-nav-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.querySelector('.close-nav').addEventListener('click', closeNav);
+        document.querySelector('.mobile-nav-overlay').addEventListener('click', closeNav);
+
+        function closeNav() {
+            document.querySelector('.mobile-nav').classList.remove('active');
+            document.querySelector('.mobile-nav-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>

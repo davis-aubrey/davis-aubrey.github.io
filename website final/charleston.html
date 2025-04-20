@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="good.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/2.jpg" alt="Portfolio Logo">
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <img src="images/hamburger.svg" alt="Menu" class="icon-img">
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <div class="close-nav">
+            <img src="images/close.svg" alt="Close" class="icon-img">
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<!-- Main Content -->
+<main>
+    <div class="collection-container">
+        <a href="gallery.html" class="back-link">← Back to Collections</a>
+        
+        <h1 class="collection-heading">Charleston, SC</h1>
+        <p class="collection-description">A glimpse of spring blooms, ocean waves, and historic buildings in the Holy City.</p>
+        
+        <div class="photo-grid">
+            <!-- Photo Items - Replace with actual photos -->
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo1.jpg', 'Historic Building')">
+                <img src="photography/charleston/azalia1.jpg" alt="Pink Azalias">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo2.jpg', 'Charleston Street')">
+                <img src="photography/charleston/beach.png" alt="Sunset at Folley Beach">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo3.jpg', 'Waterfront View')">
+                <img src="photography/charleston/spanish_moss1.jpg" alt="Cabin Behind Spanish Moss">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo4.jpg', 'Garden Path')">
+                <img src="photography/charleston/pansies.jpg" alt="Indigo Pansies">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo5.jpg', 'Colonial Architecture')">
+                <img src="photography/charleston/french_quarter.jpg" alt="French Quarter Shopping">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo6.jpg', 'Fountain Plaza')">
+                <img src="photography/charleston/spanish_moss2.jpg" alt="Spanish Moss Path">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo7.jpg', 'Charleston Market')">
+                <img src="photography/charleston/beach1.png" alt="Bridge to Folly Beach">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo8.jpg', 'Rainbow Row')">
+                <img src="photography/charleston/magnolia.jpg" alt="Magnolia Flower">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo9.jpg', 'Sunset on the Battery')">
+                <img src="photography/charleston/charleston.jpg" alt="Downtown Charleston">
+            </div>
+            <div class="photo-item" onclick="showFullSize('photography/charleston/photo9.jpg', 'Sunset on the Battery')">
+                <img src="photography/charleston/beach2.png" alt="Sunrise at Folly Beach">
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Full Size Image Overlay -->
+<div class="fullsize-overlay" id="fullsizeOverlay">
+    <div class="close-button" onclick="hideFullSize()">
+        <img src="icons/close.svg" alt="Close" class="icon-img">
+    </div>
+    <img id="fullsizeImage" class="fullsize-image" src="" alt="">
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.instagram.com/photos.bytucker/" class="social-icon">
+                <img src="images/insta.svg" alt="Instagram" class="icon-img">
+            </a>
+            <a href="mailto:photosbytucker@gmail.com" class="social-icon">
+                <img src="images/email.svg" alt="Email" class="icon-img">
+            </a>
+            <a href="tel:+8013699480" class="social-icon">
+                <img src="images/phone.svg" alt="Phone" class="icon-img">
+            </a>
+        </div>
+        <p>&copy; 2025 Tucker Davis. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Toggle mobile navigation
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+        document.querySelector('.mobile-nav').classList.add('active');
+        document.querySelector('.mobile-nav-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    document.querySelector('.close-nav').addEventListener('click', closeNav);
+    document.querySelector('.mobile-nav-overlay').addEventListener('click', closeNav);
+
+    function closeNav() {
+        document.querySelector('.mobile-nav').classList.remove('active');
+        document.querySelector('.mobile-nav-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+</script>
+</body>
+</html>
