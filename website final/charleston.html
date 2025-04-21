@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio</title>
-    <link rel="stylesheet" href="good.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/2.jpg" alt="Portfolio Logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Portfolio Logo">
+                </a>
             </div>
             <nav class="desktop-nav">
                 <ul>
@@ -40,7 +42,6 @@
         </ul>
     </nav>
 
-<!-- Main Content -->
 <main>
     <div class="collection-container">
         <a href="gallery.html" class="back-link">← Back to Collections</a>
@@ -49,36 +50,35 @@
         <p class="collection-description">A glimpse of spring blooms, ocean waves, and historic buildings in the Holy City.</p>
         
         <div class="photo-grid">
-            <!-- Photo Items - Replace with actual photos -->
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo1.jpg', 'Historic Building')">
-                <img src="photography/charleston/azalia1.jpg" alt="Pink Azalias">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/azalia1.jpeg', 'Pink Azalias')">
+                <img src="photography/charleston/azalia1.jpeg" alt="Pink Azalias">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo2.jpg', 'Charleston Street')">
-                <img src="photography/charleston/beach.png" alt="Sunset at Folley Beach">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/beach.jpeg', 'Sunset at Folley Beach')">
+                <img src="photography/charleston/beach.jpeg" alt="Sunset at Folley Beach">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo3.jpg', 'Waterfront View')">
-                <img src="photography/charleston/spanish_moss1.jpg" alt="Cabin Behind Spanish Moss">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/spanish_moss1.jpeg', 'Cabin Behind Spanish Moss')">
+                <img src="photography/charleston/spanish_moss1.jpeg" alt="Cabin Behind Spanish Moss">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo4.jpg', 'Garden Path')">
-                <img src="photography/charleston/pansies.jpg" alt="Indigo Pansies">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/pansies.jpeg', 'Indigo Pansies')">
+                <img src="photography/charleston/pansies.jpeg" alt="Indigo Pansies">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo5.jpg', 'Colonial Architecture')">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/french_quarter.jpg', 'French Quarter Shopping')">
                 <img src="photography/charleston/french_quarter.jpg" alt="French Quarter Shopping">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo6.jpg', 'Fountain Plaza')">
-                <img src="photography/charleston/spanish_moss2.jpg" alt="Spanish Moss Path">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/spanish_moss2.jpeg', 'Spanish Moss Path')">
+                <img src="photography/charleston/spanish_moss2.jpeg" alt="Spanish Moss Path">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo7.jpg', 'Charleston Market')">
-                <img src="photography/charleston/beach1.png" alt="Bridge to Folly Beach">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/beach1.jpeg', 'Bridge to Folly Beach')">
+                <img src="photography/charleston/beach1.jpeg" alt="Bridge to Folly Beach">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo8.jpg', 'Rainbow Row')">
-                <img src="photography/charleston/magnolia.jpg" alt="Magnolia Flower">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/magnolia.jpeg', 'Magnolia Flower')">
+                <img src="photography/charleston/magnolia.jpeg" alt="Magnolia Flower">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo9.jpg', 'Sunset on the Battery')">
-                <img src="photography/charleston/charleston.jpg" alt="Downtown Charleston">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/charleston.jpeg', 'Downtown Charleston')">
+                <img src="photography/charleston/charleston.jpeg" alt="Downtown Charleston">
             </div>
-            <div class="photo-item" onclick="showFullSize('photography/charleston/photo9.jpg', 'Sunset on the Battery')">
-                <img src="photography/charleston/beach2.png" alt="Sunrise at Folly Beach">
+            <div class="photo-item" onclick="showFullSize('photography/charleston/beach.jpg', 'Sunsrise at Folly Beach')">
+                <img src="photography/charleston/beach2.jpg" alt="Sunrise at Folly Beach">
             </div>
         </div>
     </div>
@@ -102,8 +102,8 @@
             <a href="mailto:photosbytucker@gmail.com" class="social-icon">
                 <img src="images/email.svg" alt="Email" class="icon-img">
             </a>
-            <a href="tel:+8013699480" class="social-icon">
-                <img src="images/phone.svg" alt="Phone" class="icon-img">
+            <a href="sms:+8013699480" class="social-icon">
+                <img src="images/text.svg" alt="Text Tucker" class="icon-img">
             </a>
         </div>
         <p>&copy; 2025 Tucker Davis. All rights reserved.</p>
