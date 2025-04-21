@@ -11,18 +11,18 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/logo.png" alt="Portfolio Logo">
+                <img src="images/icons/logo.png" alt="Tucker Davis Photography Logo">
             </div>
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="hamburger-menu">
-                <img src="images/hamburger.svg" alt="Menu" class="icon-img">
+                <img src="images/icons/hamburger.svg" alt="Menu" class="icon-img">
             </div>
         </div>
     </header>
@@ -30,12 +30,12 @@
     <div class="mobile-nav-overlay"></div>
     <nav class="mobile-nav">
         <div class="close-nav">
-            <img src="images/close.svg" alt="Close" class="icon-img">
+            <img src="images/icons/close.svg" alt="Close" class="icon-img">
         </div>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -43,24 +43,21 @@
     <!-- Main Content -->
     <main>
         <div class="about-container">
-            <h1 >Hey, I'm Tucker</h1>
-            
+            <h1 class="about-heading">Hey, I'm Tucker</h1>
             <div class="about-content">
                 <div class="about-photo">
-                    <img src="photography/tucker_mt.png" alt="Photographer Portrait">
+                    <img src="images/tucker_mt.png" alt="Photographer Portrait">
                 </div>
                 
                 <div>
-                    <h2>Friendly neighborhood Cameraman</h2>
-                    <p>Hello, I'm Tucker. For over a decade, I've been capturing moments through my lens, telling stories that words alone cannot express. My journey in photography began when I was just a teenager, fascinated by how a single image could freeze time and preserve emotions forever.</p>
+                    <h2 class="signature">Friendly neighborhood Cameraman</h2>
+                    <p>Hello, I'm Tucker. I love capturing moments and telling stories. I started my photography journey a couple years ago.</p>
                     
-                    <p>Based in Lehi, Utah, I specialize in landscape, portrait, and event photography. I believe that photography is not just about taking pictures—it's about creating art that resonates with people and evokes genuine emotions.</p>
+                    <p>Based in Lindon, Utah, I enjoy photographing people and places, and occationally my cat Tobi. I believe that photography is not just about taking pictures—it's about creating art that resonates with people and evokes genuine emotions.</p>
                     
-                    <p>When I'm not behind the camera, you can find me exploring new destinations, hiking through nature trails, or experimenting with new techniques in my studio. Every location and subject presents a unique opportunity to capture something extraordinary.</p>
-                    
-                    <p>I approach each project with creativity, technical precision, and a deep respect for my subjects. My goal is always to exceed expectations and deliver images that you'll treasure for years to come.</p>
-                    
-                    <div><h1>Tucker</h1></div>
+                    <p>When I'm not hefting around my camera, you can find me hiking and spending time with family. Every location and subject presents a unique opportunity to capture something extraordinary.</p>
+                    <p>I'm always looking for new adventures and creative projects. If you're interested in collaborating or have a photography project in mind, feel free to reach out!</p>                   
+                    <div><h1 class="signature">Tucker</h1></div>
                 </div>
             </div>
             <form action="https://formspree.io/f/xwpoelea" method="POST" class="contact-form">
@@ -98,35 +95,19 @@
         <div class="footer-content">
             <div class="social-links">
                 <a href="https://www.instagram.com/photos.bytucker/" class="social-icon">
-                    <img src="images/insta.svg" alt="Instagram" class="icon-img">
+                    <img src="images/icons/insta.svg" alt="Instagram" class="icon-img">
                 </a>
                 <a href="mailto:photosbytucker@gmail.com" class="social-icon">
-                    <img src="images/email.svg" alt="Email" class="icon-img">
+                    <img src="images/icons/email.svg" alt="Email" class="icon-img">
                 </a>
                 <a href="tel:+8013699480" class="social-icon">
-                    <img src="images/phone.svg" alt="Phone" class="icon-img">
+                    <img src="images/icons/phone.svg" alt="Phone" class="icon-img">
                 </a>
             </div>
             <p>&copy; 2025 Tucker Davis. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Toggle mobile navigation
-        document.querySelector('.hamburger-menu').addEventListener('click', function() {
-            document.querySelector('.mobile-nav').classList.add('active');
-            document.querySelector('.mobile-nav-overlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        document.querySelector('.close-nav').addEventListener('click', closeNav);
-        document.querySelector('.mobile-nav-overlay').addEventListener('click', closeNav);
-
-        function closeNav() {
-            document.querySelector('.mobile-nav').classList.remove('active');
-            document.querySelector('.mobile-nav-overlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    </script>
+    <script src="js/sidebar.js"></script>
 </body>
 </html>

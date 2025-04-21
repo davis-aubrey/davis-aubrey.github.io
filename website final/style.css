@@ -176,14 +176,14 @@ header {
 /* Main Content */
 main {
     margin-top: 70px;
-    min-height: calc(100vh - 70px - 100px); /* account for header and footer */
+    min-height: calc(100vh - 70px - 100px);
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     height: 90vh;
-    background-image: url('photography/hero.jpg');
+    background-image: url('images/mountains/cover1.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -297,33 +297,52 @@ main {
 }
 
 .about-heading {
-    text-align: center;
+    text-align: left;
     color: #49326b;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     font-size: 2.5rem;
 }
 
 .about-content {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
     gap: 3rem;
-    align-items: center;
+    align-items: flex-start; /* Changed from center to avoid squishing */
 }
 
 .about-photo {
-    flex: 1;
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 40%; /* Set explicit width */
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .about-photo img {
-    width: 100%;
+    width: 100%; /* Make image responsive */
     height: auto;
     display: block;
+    max-width: 100%; /* Ensure it doesn't overflow */
+    border-radius: 8px; /* Match container border radius */
 }
 
 .about-text {
-    flex: 1;
+    flex: 1; /* Take remaining space */
+    min-width: 300px; /* Ensure text has minimum width */
+}
+
+/* Media query adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-photo {
+        width: 100%;
+        max-width: 500px; /* Limit maximum width on small screens */
+        margin: 0 auto 2rem auto;
+    }
 }
 
 .about-text h2 {
@@ -344,16 +363,6 @@ main {
     margin-top: 2rem;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-photo, .about-text {
-        width: 100%;
-    }
-}
 
 /* Gallery-specific styles */
 .gallery-container {
@@ -364,7 +373,8 @@ main {
 
 .gallery-heading {
     color: #49326b;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     font-size: 2rem;
 }
 
@@ -488,6 +498,9 @@ main {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: white; /* Make sure text is visible */
+    font-size: 24px; /* Make the × larger */
+    line-height: 1;
     transition: background-color 0.3s;
 }
 
@@ -495,17 +508,65 @@ main {
     background-color: #C792DF;
 }
 
-/* Media Queries */
 @media (max-width: 992px) {
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 @media (max-width: 576px) {
     .photo-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #b070d0;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #49326b;
 }
 
 
@@ -549,16 +610,14 @@ footer {
     background-color: #C792DF;
 }
 
-/* Media Queries */
+
 @media (max-width: 62em) {
     .desktop-nav {
         display: none;
     }
-    
     .hamburger-menu {
         display: block;
     }
-    
     .mobile-nav {
         width: 60%;
     }
@@ -568,11 +627,9 @@ footer {
     .hero h1 {
         font-size: 2.5rem;
     }
-    
     .featured-work h2 {
         font-size: 2rem;
     }
-    
     .mobile-nav {
         width: 80%;
     }
@@ -582,11 +639,9 @@ footer {
     .hero h1 {
         font-size: 2rem;
     }
-    
     .hero p {
         font-size: 1rem;
     }
-    
     .mobile-nav {
         width: 100%;
     }

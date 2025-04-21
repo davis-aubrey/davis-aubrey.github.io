@@ -11,7 +11,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/logo.png" alt="Portfolio Logo">
+                <img src="images/icons/logo.png" alt="Tucker Davis Photography Logo">
             </div>
             <nav class="desktop-nav">
                 <ul>
@@ -22,7 +22,7 @@
                 </ul>
             </nav>
             <div class="hamburger-menu">
-                <img src="images/hamburger.svg" alt="Menu" class="icon-img">
+                <img src="images/icons/hamburger.svg" alt="Menu" class="icon-img">
             </div>
         </div>
     </header>
@@ -30,7 +30,7 @@
     <div class="mobile-nav-overlay"></div>
     <nav class="mobile-nav">
         <div class="close-nav">
-            <img src="images/close.svg" alt="Close" class="icon-img">
+            <img src="images/icons/close.svg" alt="Close" class="icon-img">
         </div>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -49,25 +49,22 @@
             </div>
         </section>
         <div class="about-container">
-            <a class="about-content">Based in Lehi, Utah</a>
+            <a class="about-content">Based in Lindon, Utah</a>
         </div>
         <section class="featured-work">
             <h2>FEATURED WORK</h2>
             <div class="featured-grid">
                 <div>
-                    <img src="photography/mountains/alpine.png" alt="Photo of Aspen Tree Path">
+                    <img src="images/mountains/alpine.png" alt="Aspen Tree Path">
                 </div>
                 <div>
-                    <img src="photography/couples/couple.jpg" alt="Photo of a Couple">
-                </div>
-                <!-- <div>
-                    <img src="photography/galveston/galveston.png" alt="Photo of Downtown Galveston">
-                </div> -->
-                <div>
-                    <img src="photography/tobi_cat_1800.png" alt="Photo of Downtown Galveston">
+                    <img src="images/couples/couple.jpg" alt="Photo of a Couple">
                 </div>
                 <div>
-                    <img src="photography/tobi_cat.JPG" alt="Photo of a Devon Rex Cat">
+                    <img src="images/galveston/galveston.png" alt="Downtown Galveston">
+                </div>
+                <div>
+                    <img src="images/tobi_cat_1800.png" alt="Devon Rex Cat">
                 </div>
             </div>
         </section>
@@ -77,35 +74,19 @@
         <div class="footer-content">
             <div class="social-links">
                 <a href="https://www.instagram.com/photos.bytucker/" class="social-icon">
-                    <img src="images/insta.svg" alt="Go to Tucker's Instagram" class="icon-img">
+                    <img src="images/icons/insta.svg" alt="Go to Tucker's Instagram" class="icon-img">
                 </a>
                 <a href="mailto:photosbytucker@gmail.com" class="social-icon">
-                    <img src="images/email.svg" alt="Email Tucker" class="icon-img">
+                    <img src="images/icons/email.svg" alt="Email Tucker" class="icon-img">
                 </a>
                 <a href="sms:+8013699480" class="social-icon">
-                    <img src="images/text.svg" alt="Text Tucker" class="icon-img">
+                    <img src="images/icons/text.svg" alt="Text Tucker" class="icon-img">
                 </a>
             </div>
             <p>&copy; 2025 Tucker Davis. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Toggle mobile navigation
-        document.querySelector('.hamburger-menu').addEventListener('click', function() {
-            document.querySelector('.mobile-nav').classList.add('active');
-            document.querySelector('.mobile-nav-overlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        document.querySelector('.close-nav').addEventListener('click', closeNav);
-        document.querySelector('.mobile-nav-overlay').addEventListener('click', closeNav);
-
-        function closeNav() {
-            document.querySelector('.mobile-nav').classList.remove('active');
-            document.querySelector('.mobile-nav-overlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    </script>
+    <script src="js/sidebar.js"> </script>
 </body>
 </html>
